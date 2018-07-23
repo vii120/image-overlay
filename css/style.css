@@ -183,9 +183,9 @@ h2 {
 .fade-btn-r:hover > .btn-outer {
   opacity: 1; }
 
-/*----with button ( translucent )
+/*----with button ( white bg, filter )
 ------------------------------*/
-.fade-btn-tlt .btn {
+.fade-btn-wh-f .btn {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -197,16 +197,61 @@ h2 {
   cursor: pointer;
   opacity: 0;
   transition: all .3s; }
-.fade-btn-tlt img {
+.fade-btn-wh-f img {
   transition: all .3s; }
-.fade-btn-tlt:hover img {
+.fade-btn-wh-f:hover .btn {
+  opacity: 1; }
+.fade-btn-wh-f:hover img {
   opacity: .5; }
-.fade-btn-tlt:hover .btn {
+
+/*----with button ( white bg, block )
+------------------------------*/
+.fade-btn-wh-b .btn-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  transition: all .3s; }
+  .fade-btn-wh-b .btn-outer .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffcc33;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer; }
+.fade-btn-wh-b:hover > .btn-outer {
   opacity: 1; }
 
-/*----with button ( dark )
+/*----with button ( dark bg, filter )
 ------------------------------*/
-.fade-btn-d .btn-outer {
+.fade-btn-bl-f .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .3s; }
+.fade-btn-bl-f img {
+  transition: all .3s; }
+.fade-btn-bl-f:hover .btn {
+  opacity: 1; }
+.fade-btn-bl-f:hover img {
+  filter: brightness(50%);
+  -webkit-filter: brightness(50%); }
+
+/*----with button ( dark bg, block )
+------------------------------*/
+.fade-btn-bl-b .btn-outer {
   position: absolute;
   top: 0;
   left: 0;
@@ -215,7 +260,7 @@ h2 {
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
   transition: all .3s; }
-  .fade-btn-d .btn-outer .btn {
+  .fade-btn-bl-b .btn-outer .btn {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -225,8 +270,33 @@ h2 {
     color: #fff;
     padding: 8px 16px;
     cursor: pointer; }
-.fade-btn-d:hover > .btn-outer {
+.fade-btn-bl-b:hover > .btn-outer {
   opacity: 1; }
+
+/*----with button ( blur filter )
+------------------------------*/
+.fade-btn-blur {
+  overflow: hidden; }
+  .fade-btn-blur .btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s;
+    font-weight: bold; }
+  .fade-btn-blur img {
+    transition: all .3s; }
+  .fade-btn-blur:hover .btn {
+    opacity: 1; }
+  .fade-btn-blur:hover img {
+    filter: blur(2px);
+    -webkit-filter: blur(2px); }
 
 /*----------------------------*/
 /* $Slide In Box
