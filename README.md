@@ -33,7 +33,7 @@ https://vii120.github.io/image-overlay/
 
 放大(zoom in)及縮小(zoom out)效果，亦有雙圖片切換範例(zoom with two images)
 
-![zoom](https://i.imgur.com/UVA0FqL.gif)
+![zoom](https://github.com/vii120/image-overlay/blob/master/zoom_demo.gif)
 
 ## CSS preprocessor
 
