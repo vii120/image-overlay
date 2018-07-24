@@ -30,114 +30,114 @@ $bgc: #f3f3f3;
 // $Position Class
 // -------------------------
 @mixin p-center{
-	position: absolute;
-	top:50%;
-	left:50%;
-	transform: translate(-50%, -50%);
-	@content;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  @content;
 }
 @mixin p-full{
-	position:absolute;
-	top:0;
-	left:0;
-	width: 100%;
-	height: 100%;
-	@content;
+  position:absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  @content;
 }
 /*----------------------------*/
 /* $Global
 /*----------------------------*/
 *{
-	position: relative;
-	box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
 }
 html, body{
-	margin:0;
-	padding:0;
-	font-family: 'Merriweather', serif;
-	background: $bgc;
+  margin:0;
+  padding:0;
+  font-family: 'Merriweather', serif;
+  background: $bgc;
 }
 .container{
-	margin:0 auto;
-	max-width:1140px;
-	padding:0 16px;
+  margin:0 auto;
+  max-width:1140px;
+  padding:0 16px;
 }
 .flex{
-	display:flex;
-	justify-content:space-around;
-	flex-wrap: wrap;
-	margin-bottom:16px;
+  display:flex;
+  justify-content:space-around;
+  flex-wrap: wrap;
+  margin-bottom:16px;
 }
 /*----------------------------*/
 /* $Header
 /*----------------------------*/
 header{
-	text-align: center;
-	h1{
-		text-transform: capitalize;
-	}
-	.nav{
-		display:inline-block;
-		text-decoration: none;
-		color:$grey;
-		border:1px solid;
-		border-radius:8px;
-		padding:10px 15px;
-		margin:8px 4px;
-		transition:all .2s;
-		&:hover{
-			color:$secondary-color;
-		}
-	}
+  text-align: center;
+  h1{
+    text-transform: capitalize;
+  }
+  .nav{
+    display:inline-block;
+    text-decoration: none;
+    color:$grey;
+    border:1px solid;
+    border-radius:8px;
+    padding:10px 15px;
+    margin:8px 4px;
+    transition:all .2s;
+    &:hover{
+      color:$secondary-color;
+    }
+  }
 }
 /*----------------------------*/
 /* $All Boxes
 /*----------------------------*/
 h2{
-	display:block;
-	width:100%;
-	text-transform: capitalize;
-	margin-left:16px;
-	margin-bottom: 0;
-	color:$secondary-color;
-	font-weight:bold;
-	span{
-		text-transform: none;
-		font-weight:normal;
-		font-size: 1rem;
-		color:$grey;
-	}
+  display:block;
+  width:100%;
+  text-transform: capitalize;
+  margin-left:16px;
+  margin-bottom: 0;
+  color:$secondary-color;
+  font-weight:bold;
+  span{
+    text-transform: none;
+    font-weight:normal;
+    font-size: 1rem;
+    color:$grey;
+  }
 }
 .outer{
-	background-color: #fff;
-	margin:16px 8px;
-	box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
+  background-color: #fff;
+  margin:16px 8px;
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.3);
 }
 [class*=fade], 
 [class*=slide],
 [class^=zoom-]{
-	max-width:300px;
-	img{
-		display:block;
-		width:100%;
-	}
+  max-width:300px;
+  img{
+    display:block;
+    width:100%;
+  }
 }
 [class^=zoomimg-]{
-	max-width:240px;
-	img{
-		display:block;
-		width:100%;
-	}
+  max-width:240px;
+  img{
+    display:block;
+    width:100%;
+  }
 }
 .title{
-	margin:12px 0;
-	margin-left:8px;
-	.desc{
-		margin-left:4px;
-		font-size: .8rem;
-		text-transform: none;
-		color: $grey;
-	}
+  margin:12px 0;
+  margin-left:8px;
+  .desc{
+    margin-left:4px;
+    font-size: .8rem;
+    text-transform: none;
+    color: $grey;
+  }
 }
 /*----------------------------*/
 /* $Fade In Box
@@ -145,182 +145,182 @@ h2{
 /*----without text
 -------------------------*/
 .fade-r{
-	&:after{
-		content:"";
-		@include p-full;
-		background-color: $primary-color;
-		opacity:0;
-		transition: all .3s;
-	}
-	&:hover:after{
-		opacity:1;
-	}	
+  &:after{
+    content:"";
+    @include p-full;
+    background-color: $primary-color;
+    opacity:0;
+    transition: all .3s;
+  }
+  &:hover:after{
+    opacity:1;
+  }  
 }
 /*----with text ( using pseudo class )
 ------------------------------*/
 .fade-text1{
-	@extend .fade-r;
-	.text{
-		@include p-center;
-		font-size:1.5rem;
-		opacity:0;
-		transition: all .3s;
-		z-index:100;
-	}
-	&:hover > .text{
-		opacity:1;
-	}
+  @extend .fade-r;
+  .text{
+    @include p-center;
+    font-size:1.5rem;
+    opacity:0;
+    transition: all .3s;
+    z-index:100;
+  }
+  &:hover > .text{
+    opacity:1;
+  }
 }
 /*----with text ( using div )
 ------------------------------*/
 .fade-text2{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		opacity:0;
-		transition: all .3s;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		opacity:1;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    opacity:0;
+    transition: all .3s;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    opacity:1;
+  }
 }
 /*----with button ( using div )
 ------------------------------*/
 .fade-btn-r{
-	.btn-outer{
-		@include p-full;
-		background-color: $primary-color;
-		opacity:0;
-		transition: all .3s;
-		.btn{
-			@include p-center;
-			border: 2px solid #fff;
-			border-radius: 5px;
-			color: #fff;
-			font-weight:bold;
-			padding:8px 16px;
-			cursor:pointer;
-		}
-	}
-	&:hover > .btn-outer{
-		opacity:1;
-	}
+  .btn-outer{
+    @include p-full;
+    background-color: $primary-color;
+    opacity:0;
+    transition: all .3s;
+    .btn{
+      @include p-center;
+      border: 2px solid #fff;
+      border-radius: 5px;
+      color: #fff;
+      font-weight:bold;
+      padding:8px 16px;
+      cursor:pointer;
+    }
+  }
+  &:hover > .btn-outer{
+    opacity:1;
+  }
 }
 /*----with button ( white bg, filter )
 ------------------------------*/
 .fade-btn-wh-f{
-	.btn{
-		@include p-center;
-		border: 1px solid transparent;
-		border-radius: 5px;
-		background-color: $primary-color;
-		padding:8px 16px;
-		cursor:pointer;
-		opacity:0;
-		transition: all .3s;
-	}
-	img{
-		transition: all .3s;
-	}
-	&:hover {
-		.btn{opacity:1;}
-		img{opacity: .5;}
-	}
+  .btn{
+    @include p-center;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background-color: $primary-color;
+    padding:8px 16px;
+    cursor:pointer;
+    opacity:0;
+    transition: all .3s;
+  }
+  img{
+    transition: all .3s;
+  }
+  &:hover {
+    .btn{opacity:1;}
+    img{opacity: .5;}
+  }
 }
 /*----with button ( white bg, block )
 ------------------------------*/
 .fade-btn-wh-b{
-	.btn-outer{
-		@include p-full;
-		background-color: rgba(256,256,256,0.5);
-		opacity:0;
-		transition: all .3s;
-		.btn{
-			@include p-center;
-			background-color: $primary-color;
-			border-radius: 5px;
-			padding:8px 16px;
-			cursor:pointer;
-		}
-	}
-	&:hover > .btn-outer{
-		opacity:1;
-	}
+  .btn-outer{
+    @include p-full;
+    background-color: rgba(256,256,256,0.5);
+    opacity:0;
+    transition: all .3s;
+    .btn{
+      @include p-center;
+      background-color: $primary-color;
+      border-radius: 5px;
+      padding:8px 16px;
+      cursor:pointer;
+    }
+  }
+  &:hover > .btn-outer{
+    opacity:1;
+  }
 }
 /*----with button ( dark bg, filter )
 ------------------------------*/
 .fade-btn-bl-f{
-	.btn{
-		@include p-center;
-		border: 1px solid #fff;
-		color: #fff;
-		border-radius: 5px;
-		padding:8px 16px;
-		cursor:pointer;
-		opacity: 0;
-		transition: all .3s;
-	}
-	img{
-		transition: all .3s;
-	}
-	&:hover {
-		.btn{opacity:1;}
-		img{
-			filter: brightness(50%);
-			-webkit-filter: brightness(50%);
-		}
-	}
+  .btn{
+    @include p-center;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    padding:8px 16px;
+    cursor:pointer;
+    opacity: 0;
+    transition: all .3s;
+  }
+  img{
+    transition: all .3s;
+  }
+  &:hover {
+    .btn{opacity:1;}
+    img{
+      filter: brightness(50%);
+      -webkit-filter: brightness(50%);
+    }
+  }
 }
 /*----with button ( dark bg, block )
 ------------------------------*/
 .fade-btn-bl-b{
-	.btn-outer{
-		@include p-full;
-		background-color: rgba(0,0,0,0.5);
-		opacity:0;
-		transition: all .3s;
-		.btn{
-			@include p-center;
-			border: 1px solid #fff;
-			border-radius: 5px;
-			color: #fff;
-			padding:8px 16px;
-			cursor:pointer;
-		}
-	}
-	&:hover > .btn-outer{
-		opacity:1;
-	}
+  .btn-outer{
+    @include p-full;
+    background-color: rgba(0,0,0,0.5);
+    opacity:0;
+    transition: all .3s;
+    .btn{
+      @include p-center;
+      border: 1px solid #fff;
+      border-radius: 5px;
+      color: #fff;
+      padding:8px 16px;
+      cursor:pointer;
+    }
+  }
+  &:hover > .btn-outer{
+    opacity:1;
+  }
 }
 /*----with button ( blur filter )
 ------------------------------*/
 .fade-btn-blur{
-	overflow: hidden;
-	.btn{
-		@include p-center;
-		border: 2px solid #fff;
-		color: #fff;
-		border-radius: 5px;
-		padding:8px 16px;
-		cursor:pointer;
-		opacity: 0;
-		transition: all .3s;
-		font-weight: bold;
-	}
-	img{
-		transition: all .3s;
-	}
-	&:hover {
-		.btn{opacity:1;}
-		img{
-			filter: blur(2px);
-			-webkit-filter: blur(2px);
-		}
-	}
+  overflow: hidden;
+  .btn{
+    @include p-center;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 5px;
+    padding:8px 16px;
+    cursor:pointer;
+    opacity: 0;
+    transition: all .3s;
+    font-weight: bold;
+  }
+  img{
+    transition: all .3s;
+  }
+  &:hover {
+    .btn{opacity:1;}
+    img{
+      filter: blur(2px);
+      -webkit-filter: blur(2px);
+    }
+  }
 }
 /*----------------------------*/
 /* $Slide In Box
@@ -328,255 +328,255 @@ h2{
 /*----from left
 -------------------------*/
 .slide-left{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		width:0;
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		width:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    width:0;
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    width:100%;
+  }
 }
 
 /*----from right
 -------------------------*/
 .slide-right{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		left:100%;
-		width:0;
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		left:0;
-		width:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    left:100%;
+    width:0;
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    left:0;
+    width:100%;
+  }
 }
 
 /*----x-direction
 -------------------------*/
 .slide-x{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		left:50%;
-		width:0;
-		transform:translateX(-50%);
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		width:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    left:50%;
+    width:0;
+    transform:translateX(-50%);
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    width:100%;
+  }
 }
 
 /*----from top
 -------------------------*/
 .slide-top{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		height:0;
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		height:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    height:0;
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    height:100%;
+  }
 }
 
 /*----from bottom
 -------------------------*/
 .slide-bottom{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		top:100%;
-		height:0;
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		top:0;
-		height:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    top:100%;
+    height:0;
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    top:0;
+    height:100%;
+  }
 }
 
 /*----y-direction
 -------------------------*/
 .slide-y{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		top:50%;
-		height:0;
-		transform:translateY(-50%);
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		height:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    top:50%;
+    height:0;
+    transform:translateY(-50%);
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    height:100%;
+  }
 }
 
 /*----from top-left
 -------------------------*/
 .slide-tl{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		width:0;
-		height:0;
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		width:100%;
-		height:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    width:0;
+    height:0;
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    width:100%;
+    height:100%;
+  }
 }
 /*----from top-right
 -------------------------*/
 .slide-tr{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		left:100%;
-		width:0;
-		height:0;
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		left:0;
-		width:100%;
-		height:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    left:100%;
+    width:0;
+    height:0;
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    left:0;
+    width:100%;
+    height:100%;
+  }
 }
 /*----from bottom-left
 -------------------------*/
 .slide-bl{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		top:100%;
-		width:0;
-		height:0;
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		top:0;
-		width:100%;
-		height:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    top:100%;
+    width:0;
+    height:0;
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    top:0;
+    width:100%;
+    height:100%;
+  }
 }
 /*----from bottom-right
 -------------------------*/
 .slide-br{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		top:100%;
-		left:100%;
-		width:0;
-		height:0;
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		top:0;
-		left:0;
-		width:100%;
-		height:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    top:100%;
+    left:100%;
+    width:0;
+    height:0;
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+  }
 }
 /*----from center
 -------------------------*/
 .slide-center1{
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		top:50%;
-		left:50%;
-		transform:translate(-50%,-50%);
-		width:0;
-		height:0;
-		transition: all .5s;
-		overflow:hidden;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		width:100%;
-		height:100%;
-	}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:0;
+    height:0;
+    transition: all .5s;
+    overflow:hidden;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    width:100%;
+    height:100%;
+  }
 }
 /*----from center
 -------------------------*/
 .slide-center2{
-	.text-outer{
-		@include p-center;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		width:0;
-		height:0;
-		overflow:hidden;
-		transition:height 1s ease, width 1s .5s ease;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover > .text-outer{
-		height:100%;
-		width:100%;
-	}
+  .text-outer{
+    @include p-center;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    width:0;
+    height:0;
+    overflow:hidden;
+    transition:height 1s ease, width 1s .5s ease;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover > .text-outer{
+    height:100%;
+    width:100%;
+  }
 }
 /*----------------------------*/
 /* $Zoom Box
@@ -584,156 +584,156 @@ h2{
 /*----zoom in
 -------------------------*/
 .zoom-in{
-	overflow: hidden;
-	img{transition:all .3s;}
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		opacity:0;
-		transition:all .3s;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover{
-		img{transform: scale(1.2);}
-		.text-outer{opacity:1;}
-	}
+  overflow: hidden;
+  img{transition:all .3s;}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    opacity:0;
+    transition:all .3s;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover{
+    img{transform: scale(1.2);}
+    .text-outer{opacity:1;}
+  }
 }
 /*----zoom out
 -------------------------*/
 .zoom-out{
-	overflow: hidden;
-	img{transition:all .3s;}
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		opacity:0;
-		transition:all .3s;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover{
-		img{transform: scale(0.8);}
-		.text-outer{opacity:1;}
-	}
+  overflow: hidden;
+  img{transition:all .3s;}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    opacity:0;
+    transition:all .3s;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover{
+    img{transform: scale(0.8);}
+    .text-outer{opacity:1;}
+  }
 }
 /*----zoom in&out
 -------------------------*/
 .zoom-inout{
-	overflow: hidden;
-	img{transition:all .3s;}
-	.text-outer{
-		@include p-full;
-		background-color: $primary-color;
-		font-size:1.5rem;
-		transform: scale(1.2);
-		opacity:0;
-		transition:all .5s .3s ease;
-		.text{
-			@include p-center;
-		}
-	}
-	&:hover{
-		img{
-			transform: scale(1.2);
-			opacity:0;
-		}
-		.text-outer{
-			transform: scale(1);
-			opacity:1;
-		}
-	}
+  overflow: hidden;
+  img{transition:all .3s;}
+  .text-outer{
+    @include p-full;
+    background-color: $primary-color;
+    font-size:1.5rem;
+    transform: scale(1.2);
+    opacity:0;
+    transition:all .5s .3s ease;
+    .text{
+      @include p-center;
+    }
+  }
+  &:hover{
+    img{
+      transform: scale(1.2);
+      opacity:0;
+    }
+    .text-outer{
+      transform: scale(1);
+      opacity:1;
+    }
+  }
 }
 /*----zoom in with image
 -------------------------*/
 .zoomimg-in{
-	overflow: hidden;
-	.first{transition:all .5s;}
-	.second{
-		@include p-full;
-		opacity:0;
-		transition:all .5s;
-	}
-	&:hover{
-		.first{transform: scale(1.5);}
-		.second{opacity:1;}
-	}
+  overflow: hidden;
+  .first{transition:all .5s;}
+  .second{
+    @include p-full;
+    opacity:0;
+    transition:all .5s;
+  }
+  &:hover{
+    .first{transform: scale(1.5);}
+    .second{opacity:1;}
+  }
 }
 /*----zoom out with image
 -------------------------*/
 .zoomimg-out{
-	overflow: hidden;
-	.first{transition:all .5s;}
-	.second{
-		@include p-full;
-		opacity:0;
-		transition:all .5s;
-	}
-	&:hover{
-		.first{transform: scale(0.3);}
-		.second{opacity:1;}
-	}
+  overflow: hidden;
+  .first{transition:all .5s;}
+  .second{
+    @include p-full;
+    opacity:0;
+    transition:all .5s;
+  }
+  &:hover{
+    .first{transform: scale(0.3);}
+    .second{opacity:1;}
+  }
 }
 /*----zoom in&out with image
 -------------------------*/
 .zoomimg-inout{
-	overflow: hidden;
-	.first{transition:all .5s;}
-	.second{
-		@include p-full;
-		transform: scale(1.5);
-		opacity:0;
-		transition:all .5s .3s ease;
-	}
-	&:hover{
-		.first{
-			transform: scale(1.5);
-			opacity:0;
-		}
-		.second{
-			transform: scale(1);
-			opacity:1;
-		}
-	}
+  overflow: hidden;
+  .first{transition:all .5s;}
+  .second{
+    @include p-full;
+    transform: scale(1.5);
+    opacity:0;
+    transition:all .5s .3s ease;
+  }
+  &:hover{
+    .first{
+      transform: scale(1.5);
+      opacity:0;
+    }
+    .second{
+      transform: scale(1);
+      opacity:1;
+    }
+  }
 }
 /*----------------------------*/
 /* $Footer
 /*----------------------------*/
 footer{
-	text-align: center;
-	padding:24px 0;
+  text-align: center;
+  padding:24px 0;
 }
 @media (max-width:768px){
-	footer{padding-bottom: 48px;}
+  footer{padding-bottom: 48px;}
 }
 /*----------------------------*/
 /* $Top Button
 /*----------------------------*/
 .top{
-	position: fixed;
-	bottom:18px;
-	right:36px;
-	text-decoration: none;
-	text-align: center;
-	color: $grey;
-	background-color: $bgc;
-	border:1px solid;
-	border-width:1px 0px;
-	padding:4px 8px;
-	transition:all .2s;
-	&:hover{
-		color:#000;
-	}
+  position: fixed;
+  bottom:18px;
+  right:36px;
+  text-decoration: none;
+  text-align: center;
+  color: $grey;
+  background-color: $bgc;
+  border:1px solid;
+  border-width:1px 0px;
+  padding:4px 8px;
+  transition:all .2s;
+  &:hover{
+    color:#000;
+  }
 }
 @media (max-width:768px){
-	.top{
-		bottom:0;
-		left:0;
-		width:100%;
-		padding:4px;
-	}
+  .top{
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:4px;
+  }
 }
