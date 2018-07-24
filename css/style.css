@@ -21,43 +21,51 @@
 /*----------------------------*/
 * {
   position: relative;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html, body {
   margin: 0;
   padding: 0;
   font-family: 'Merriweather', serif;
-  background: #f3f3f3; }
+  background: #f3f3f3;
+}
 
 .container {
   margin: 0 auto;
   max-width: 1140px;
-  padding: 0 16px; }
+  padding: 0 16px;
+}
 
 .flex {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin-bottom: 16px; }
+  margin-bottom: 16px;
+}
 
 /*----------------------------*/
 /* $Header
 /*----------------------------*/
 header {
-  text-align: center; }
-  header h1 {
-    text-transform: capitalize; }
-  header .nav {
-    display: inline-block;
-    text-decoration: none;
-    color: #9b9b9b;
-    border: 1px solid;
-    border-radius: 8px;
-    padding: 10px 15px;
-    margin: 8px 4px;
-    transition: all .2s; }
-    header .nav:hover {
-      color: #ca2008; }
+  text-align: center;
+}
+header h1 {
+  text-transform: capitalize;
+}
+header .nav {
+  display: inline-block;
+  text-decoration: none;
+  color: #9b9b9b;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin: 8px 4px;
+  transition: all .2s;
+}
+header .nav:hover {
+  color: #ca2008;
+}
 
 /*----------------------------*/
 /* $All Boxes
@@ -69,42 +77,51 @@ h2 {
   margin-left: 16px;
   margin-bottom: 0;
   color: #ca2008;
-  font-weight: bold; }
-  h2 span {
-    text-transform: none;
-    font-weight: normal;
-    font-size: 1rem;
-    color: #9b9b9b; }
+  font-weight: bold;
+}
+h2 span {
+  text-transform: none;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
 
 .outer {
   background-color: #fff;
   margin: 16px 8px;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3); }
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
 
 [class*=fade],
 [class*=slide],
 [class^=zoom-] {
-  max-width: 300px; }
-  [class*=fade] img,
-  [class*=slide] img,
-  [class^=zoom-] img {
-    display: block;
-    width: 100%; }
+  max-width: 300px;
+}
+[class*=fade] img,
+[class*=slide] img,
+[class^=zoom-] img {
+  display: block;
+  width: 100%;
+}
 
 [class^=zoomimg-] {
-  max-width: 240px; }
-  [class^=zoomimg-] img {
-    display: block;
-    width: 100%; }
+  max-width: 240px;
+}
+[class^=zoomimg-] img {
+  display: block;
+  width: 100%;
+}
 
 .title {
   margin: 12px 0;
-  margin-left: 8px; }
-  .title .desc {
-    margin-left: 4px;
-    font-size: .8rem;
-    text-transform: none;
-    color: #9b9b9b; }
+  margin-left: 8px;
+}
+.title .desc {
+  margin-left: 4px;
+  font-size: .8rem;
+  text-transform: none;
+  color: #9b9b9b;
+}
 
 /*----------------------------*/
 /* $Fade In Box
@@ -120,9 +137,11 @@ h2 {
   height: 100%;
   background-color: #ffcc33;
   opacity: 0;
-  transition: all .3s; }
+  transition: all .3s;
+}
 .fade-r:hover:after, .fade-text1:hover:after {
-  opacity: 1; }
+  opacity: 1;
+}
 
 /*----with text ( using pseudo class )
 ------------------------------*/
@@ -134,9 +153,11 @@ h2 {
   font-size: 1.5rem;
   opacity: 0;
   transition: all .3s;
-  z-index: 100; }
+  z-index: 100;
+}
 .fade-text1:hover > .text {
-  opacity: 1; }
+  opacity: 1;
+}
 
 /*----with text ( using div )
 ------------------------------*/
@@ -149,14 +170,17 @@ h2 {
   background-color: #ffcc33;
   font-size: 1.5rem;
   opacity: 0;
-  transition: all .3s; }
-  .fade-text2 .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  transition: all .3s;
+}
+.fade-text2 .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .fade-text2:hover > .text-outer {
-  opacity: 1; }
+  opacity: 1;
+}
 
 /*----with button ( using div )
 ------------------------------*/
@@ -168,20 +192,23 @@ h2 {
   height: 100%;
   background-color: #ffcc33;
   opacity: 0;
-  transition: all .3s; }
-  .fade-btn-r .btn-outer .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid #fff;
-    border-radius: 5px;
-    color: #fff;
-    font-weight: bold;
-    padding: 8px 16px;
-    cursor: pointer; }
+  transition: all .3s;
+}
+.fade-btn-r .btn-outer .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
 .fade-btn-r:hover > .btn-outer {
-  opacity: 1; }
+  opacity: 1;
+}
 
 /*----with button ( white bg, filter )
 ------------------------------*/
@@ -196,13 +223,17 @@ h2 {
   padding: 8px 16px;
   cursor: pointer;
   opacity: 0;
-  transition: all .3s; }
+  transition: all .3s;
+}
 .fade-btn-wh-f img {
-  transition: all .3s; }
+  transition: all .3s;
+}
 .fade-btn-wh-f:hover .btn {
-  opacity: 1; }
+  opacity: 1;
+}
 .fade-btn-wh-f:hover img {
-  opacity: .5; }
+  opacity: .5;
+}
 
 /*----with button ( white bg, block )
 ------------------------------*/
@@ -214,18 +245,21 @@ h2 {
   height: 100%;
   background-color: rgba(255, 255, 255, 0.5);
   opacity: 0;
-  transition: all .3s; }
-  .fade-btn-wh-b .btn-outer .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffcc33;
-    border-radius: 5px;
-    padding: 8px 16px;
-    cursor: pointer; }
+  transition: all .3s;
+}
+.fade-btn-wh-b .btn-outer .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffcc33;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
 .fade-btn-wh-b:hover > .btn-outer {
-  opacity: 1; }
+  opacity: 1;
+}
 
 /*----with button ( dark bg, filter )
 ------------------------------*/
@@ -240,14 +274,18 @@ h2 {
   padding: 8px 16px;
   cursor: pointer;
   opacity: 0;
-  transition: all .3s; }
+  transition: all .3s;
+}
 .fade-btn-bl-f img {
-  transition: all .3s; }
+  transition: all .3s;
+}
 .fade-btn-bl-f:hover .btn {
-  opacity: 1; }
+  opacity: 1;
+}
 .fade-btn-bl-f:hover img {
   filter: brightness(50%);
-  -webkit-filter: brightness(50%); }
+  -webkit-filter: brightness(50%);
+}
 
 /*----with button ( dark bg, block )
 ------------------------------*/
@@ -259,44 +297,52 @@ h2 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   opacity: 0;
-  transition: all .3s; }
-  .fade-btn-bl-b .btn-outer .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 1px solid #fff;
-    border-radius: 5px;
-    color: #fff;
-    padding: 8px 16px;
-    cursor: pointer; }
+  transition: all .3s;
+}
+.fade-btn-bl-b .btn-outer .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  padding: 8px 16px;
+  cursor: pointer;
+}
 .fade-btn-bl-b:hover > .btn-outer {
-  opacity: 1; }
+  opacity: 1;
+}
 
 /*----with button ( blur filter )
 ------------------------------*/
 .fade-btn-blur {
-  overflow: hidden; }
-  .fade-btn-blur .btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 2px solid #fff;
-    color: #fff;
-    border-radius: 5px;
-    padding: 8px 16px;
-    cursor: pointer;
-    opacity: 0;
-    transition: all .3s;
-    font-weight: bold; }
-  .fade-btn-blur img {
-    transition: all .3s; }
-  .fade-btn-blur:hover .btn {
-    opacity: 1; }
-  .fade-btn-blur:hover img {
-    filter: blur(2px);
-    -webkit-filter: blur(2px); }
+  overflow: hidden;
+}
+.fade-btn-blur .btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all .3s;
+  font-weight: bold;
+}
+.fade-btn-blur img {
+  transition: all .3s;
+}
+.fade-btn-blur:hover .btn {
+  opacity: 1;
+}
+.fade-btn-blur:hover img {
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
 
 /*----------------------------*/
 /* $Slide In Box
@@ -313,14 +359,17 @@ h2 {
   font-size: 1.5rem;
   width: 0;
   transition: all .5s;
-  overflow: hidden; }
-  .slide-left .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-left .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-left:hover > .text-outer {
-  width: 100%; }
+  width: 100%;
+}
 
 /*----from right
 -------------------------*/
@@ -335,15 +384,18 @@ h2 {
   left: 100%;
   width: 0;
   transition: all .5s;
-  overflow: hidden; }
-  .slide-right .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-right .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-right:hover > .text-outer {
   left: 0;
-  width: 100%; }
+  width: 100%;
+}
 
 /*----x-direction
 -------------------------*/
@@ -359,14 +411,17 @@ h2 {
   width: 0;
   transform: translateX(-50%);
   transition: all .5s;
-  overflow: hidden; }
-  .slide-x .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-x .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-x:hover > .text-outer {
-  width: 100%; }
+  width: 100%;
+}
 
 /*----from top
 -------------------------*/
@@ -380,14 +435,17 @@ h2 {
   font-size: 1.5rem;
   height: 0;
   transition: all .5s;
-  overflow: hidden; }
-  .slide-top .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-top .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-top:hover > .text-outer {
-  height: 100%; }
+  height: 100%;
+}
 
 /*----from bottom
 -------------------------*/
@@ -402,15 +460,18 @@ h2 {
   top: 100%;
   height: 0;
   transition: all .5s;
-  overflow: hidden; }
-  .slide-bottom .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-bottom .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-bottom:hover > .text-outer {
   top: 0;
-  height: 100%; }
+  height: 100%;
+}
 
 /*----y-direction
 -------------------------*/
@@ -426,14 +487,17 @@ h2 {
   height: 0;
   transform: translateY(-50%);
   transition: all .5s;
-  overflow: hidden; }
-  .slide-y .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-y .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-y:hover > .text-outer {
-  height: 100%; }
+  height: 100%;
+}
 
 /*----from top-left
 -------------------------*/
@@ -448,15 +512,18 @@ h2 {
   width: 0;
   height: 0;
   transition: all .5s;
-  overflow: hidden; }
-  .slide-tl .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-tl .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-tl:hover > .text-outer {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 /*----from top-right
 -------------------------*/
@@ -472,16 +539,19 @@ h2 {
   width: 0;
   height: 0;
   transition: all .5s;
-  overflow: hidden; }
-  .slide-tr .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-tr .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-tr:hover > .text-outer {
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 /*----from bottom-left
 -------------------------*/
@@ -497,16 +567,19 @@ h2 {
   width: 0;
   height: 0;
   transition: all .5s;
-  overflow: hidden; }
-  .slide-bl .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-bl .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-bl:hover > .text-outer {
   top: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 /*----from bottom-right
 -------------------------*/
@@ -523,17 +596,20 @@ h2 {
   width: 0;
   height: 0;
   transition: all .5s;
-  overflow: hidden; }
-  .slide-br .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-br .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-br:hover > .text-outer {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 /*----from center
 -------------------------*/
@@ -551,15 +627,18 @@ h2 {
   width: 0;
   height: 0;
   transition: all .5s;
-  overflow: hidden; }
-  .slide-center1 .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  overflow: hidden;
+}
+.slide-center1 .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-center1:hover > .text-outer {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 /*----from center
 -------------------------*/
@@ -573,15 +652,18 @@ h2 {
   width: 0;
   height: 0;
   overflow: hidden;
-  transition: height 1s ease, width 1s .5s ease; }
-  .slide-center2 .text-outer .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  transition: height 1s ease, width 1s .5s ease;
+}
+.slide-center2 .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slide-center2:hover > .text-outer {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+}
 
 /*----------------------------*/
 /* $Zoom Box
@@ -589,154 +671,190 @@ h2 {
 /*----zoom in
 -------------------------*/
 .zoom-in {
-  overflow: hidden; }
-  .zoom-in img {
-    transition: all .3s; }
-  .zoom-in .text-outer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffcc33;
-    font-size: 1.5rem;
-    opacity: 0;
-    transition: all .3s; }
-    .zoom-in .text-outer .text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-  .zoom-in:hover img {
-    transform: scale(1.2); }
-  .zoom-in:hover .text-outer {
-    opacity: 1; }
+  overflow: hidden;
+}
+.zoom-in img {
+  transition: all .3s;
+}
+.zoom-in .text-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffcc33;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all .3s;
+}
+.zoom-in .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.zoom-in:hover img {
+  transform: scale(1.2);
+}
+.zoom-in:hover .text-outer {
+  opacity: 1;
+}
 
 /*----zoom out
 -------------------------*/
 .zoom-out {
-  overflow: hidden; }
-  .zoom-out img {
-    transition: all .3s; }
-  .zoom-out .text-outer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffcc33;
-    font-size: 1.5rem;
-    opacity: 0;
-    transition: all .3s; }
-    .zoom-out .text-outer .text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-  .zoom-out:hover img {
-    transform: scale(0.8); }
-  .zoom-out:hover .text-outer {
-    opacity: 1; }
+  overflow: hidden;
+}
+.zoom-out img {
+  transition: all .3s;
+}
+.zoom-out .text-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffcc33;
+  font-size: 1.5rem;
+  opacity: 0;
+  transition: all .3s;
+}
+.zoom-out .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.zoom-out:hover img {
+  transform: scale(0.8);
+}
+.zoom-out:hover .text-outer {
+  opacity: 1;
+}
 
 /*----zoom in&out
 -------------------------*/
 .zoom-inout {
-  overflow: hidden; }
-  .zoom-inout img {
-    transition: all .3s; }
-  .zoom-inout .text-outer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #ffcc33;
-    font-size: 1.5rem;
-    transform: scale(1.2);
-    opacity: 0;
-    transition: all .5s .3s ease; }
-    .zoom-inout .text-outer .text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-  .zoom-inout:hover img {
-    transform: scale(1.2);
-    opacity: 0; }
-  .zoom-inout:hover .text-outer {
-    transform: scale(1);
-    opacity: 1; }
+  overflow: hidden;
+}
+.zoom-inout img {
+  transition: all .3s;
+}
+.zoom-inout .text-outer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffcc33;
+  font-size: 1.5rem;
+  transform: scale(1.2);
+  opacity: 0;
+  transition: all .5s .3s ease;
+}
+.zoom-inout .text-outer .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.zoom-inout:hover img {
+  transform: scale(1.2);
+  opacity: 0;
+}
+.zoom-inout:hover .text-outer {
+  transform: scale(1);
+  opacity: 1;
+}
 
 /*----zoom in with image
 -------------------------*/
 .zoomimg-in {
-  overflow: hidden; }
-  .zoomimg-in .first {
-    transition: all .5s; }
-  .zoomimg-in .second {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all .5s; }
-  .zoomimg-in:hover .first {
-    transform: scale(1.5); }
-  .zoomimg-in:hover .second {
-    opacity: 1; }
+  overflow: hidden;
+}
+.zoomimg-in .first {
+  transition: all .5s;
+}
+.zoomimg-in .second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all .5s;
+}
+.zoomimg-in:hover .first {
+  transform: scale(1.5);
+}
+.zoomimg-in:hover .second {
+  opacity: 1;
+}
 
 /*----zoom out with image
 -------------------------*/
 .zoomimg-out {
-  overflow: hidden; }
-  .zoomimg-out .first {
-    transition: all .5s; }
-  .zoomimg-out .second {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    transition: all .5s; }
-  .zoomimg-out:hover .first {
-    transform: scale(0.3); }
-  .zoomimg-out:hover .second {
-    opacity: 1; }
+  overflow: hidden;
+}
+.zoomimg-out .first {
+  transition: all .5s;
+}
+.zoomimg-out .second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all .5s;
+}
+.zoomimg-out:hover .first {
+  transform: scale(0.3);
+}
+.zoomimg-out:hover .second {
+  opacity: 1;
+}
 
 /*----zoom in&out with image
 -------------------------*/
 .zoomimg-inout {
-  overflow: hidden; }
-  .zoomimg-inout .first {
-    transition: all .5s; }
-  .zoomimg-inout .second {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: scale(1.5);
-    opacity: 0;
-    transition: all .5s .3s ease; }
-  .zoomimg-inout:hover .first {
-    transform: scale(1.5);
-    opacity: 0; }
-  .zoomimg-inout:hover .second {
-    transform: scale(1);
-    opacity: 1; }
+  overflow: hidden;
+}
+.zoomimg-inout .first {
+  transition: all .5s;
+}
+.zoomimg-inout .second {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.5);
+  opacity: 0;
+  transition: all .5s .3s ease;
+}
+.zoomimg-inout:hover .first {
+  transform: scale(1.5);
+  opacity: 0;
+}
+.zoomimg-inout:hover .second {
+  transform: scale(1);
+  opacity: 1;
+}
 
 /*----------------------------*/
 /* $Footer
 /*----------------------------*/
 footer {
   text-align: center;
-  padding: 24px 0; }
+  padding: 24px 0;
+}
 
 @media (max-width: 768px) {
   footer {
-    padding-bottom: 48px; } }
+    padding-bottom: 48px;
+  }
+}
 /*----------------------------*/
 /* $Top Button
 /*----------------------------*/
@@ -751,15 +869,19 @@ footer {
   border: 1px solid;
   border-width: 1px 0px;
   padding: 4px 8px;
-  transition: all .2s; }
-  .top:hover {
-    color: #000; }
+  transition: all .2s;
+}
+.top:hover {
+  color: #000;
+}
 
 @media (max-width: 768px) {
   .top {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 4px; } }
+    padding: 4px;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
