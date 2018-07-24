@@ -143,7 +143,7 @@ h2 span {
   opacity: 1;
 }
 
-/*----with text ( using pseudo class )
+/*----with text ( using pseudo element )
 ------------------------------*/
 .fade-text1 .text {
   position: absolute;
